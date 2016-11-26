@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -d venv ]; then
+  echo 'Found old virtualenv. Removing...'
+  rm -rf venv/
+  echo 'Done.'
+fi
+
+echo ''
+echo 'Setting up virtual environment'
+echo ''
+
+virtualenv venv/
+venv/bin/pip install -r requirements.txt
